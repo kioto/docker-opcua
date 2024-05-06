@@ -1,0 +1,10 @@
+services:
+  opcua-server:
+    image: opcua-server-image:latest
+    restart: always
+    build: .
+    tty: true
+    ports:
+      - 4840:4840
+    volumes:
+      - .:/mnt/local
